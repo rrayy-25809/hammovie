@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import '../style.scss';
 
 function id_to_genre(id) {
     const genres = {
@@ -28,7 +29,7 @@ function id_to_genre(id) {
 
 function Movie({ID, CoverImg, title, summary, genre_ids}) {
     return(
-        <div key={ID}>
+        <div className="movie-card" key={ID}>
             <img src={CoverImg} alt="CoverImg"/>
             <h2>
                 <Link to={`/movie/${ID}`}>

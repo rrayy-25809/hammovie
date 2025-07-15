@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 import Movie from "../components/Movie";
+import '../style.scss';
+import { Navbar, Footer } from "../components/basic";
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -16,9 +18,10 @@ function Home() {
         getMovies();
     },[]);
 
-    return(//https://stackoverflow.com/questions/60791758/how-to-get-country-flag-code-given-the-name-of-the-country
+    return(
         <div>
-            {loading ? <h1>Loading...</h1>: <div>{movies.map((movie) => (
+            <Navbar></Navbar>
+            {loading ? <h1>Loading...</h1>: <div className="movie-list">{movies.map((movie) => (
                 <Movie
                 ID={movie.id}
                 CoverImg={movie.poster_path}
@@ -26,6 +29,7 @@ function Home() {
                 summary={movie.overview}
                 genre_ids={movie.genre_ids}/>
                 ))}</div>}
+            <Footer></Footer>
         </div>
     )
 }
