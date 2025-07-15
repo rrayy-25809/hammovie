@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Movie from "../components/Movie";
 import '../style.scss';
-import { Navbar, Footer } from "../components/basic";
+import { Navbar, Footer } from "../components/Basic";
 
 function Home() {
     const [loading, setLoading] = useState(true);

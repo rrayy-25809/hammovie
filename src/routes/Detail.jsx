@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react"
 import '../style.scss';
-import { Footer, Navbar } from "../components/basic";
+import { Footer, Navbar } from "../components/Basic.jsx";
 
 function Detail() {
     const {id} = useParams();
